@@ -61,6 +61,7 @@ namespace kxWhereAreYou {
             static inline bool bDoFavorCtrlKey = false;
             static inline bool bDoFavorShiftKey = false;
             static inline bool bDoFavorAltKey = false;
+            static inline bool bControlWithPower = false;
         };
         struct Colors {
             static inline std::string sDefaultColor = "FF0000";

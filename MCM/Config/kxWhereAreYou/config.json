@@ -320,6 +320,19 @@
           "help": "Use [Alt] key",
           "valueOptions": {
             "sourceType": "ModSettingBool"
+          },
+        },
+        {
+          "type": "header",
+          "text": "Control With Power"
+        },
+        {
+          "id": "bControlWithPower:Hotkeys",
+          "type": "toggle",
+          "text": "Activate with Power",
+          "help": "Learn power in magic menu as an alternative to hotkeys",
+          "valueOptions": {
+            "sourceType": "ModSettingBool"
           }
         }
       ]

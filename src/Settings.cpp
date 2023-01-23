@@ -76,6 +76,7 @@ namespace kxWhereAreYou {
         logger::info("[Settings] Hotkeys::bDoFavorCtrlKey = {}", Hotkeys::bDoFavorCtrlKey);
         logger::info("[Settings] Hotkeys::bDoFavorShiftKey = {}", Hotkeys::bDoFavorShiftKey);
         logger::info("[Settings] Hotkeys::bDoFavorAltKey = {}", Hotkeys::bDoFavorAltKey);
+        logger::info("[Settings] Hotkeys::bControlWithPower = {}", Hotkeys::bControlWithPower);
         // Colors
         logger::info("[Settings] Colors::sDefaultColor = {}", Colors::sDefaultColor);
         // Icons
@@ -143,6 +144,7 @@ namespace kxWhereAreYou {
         ReadBoolSetting(mcm, "Hotkeys", "bDoFavorCtrlKey", Hotkeys::bDoFavorCtrlKey);
         ReadBoolSetting(mcm, "Hotkeys", "bDoFavorShiftKey", Hotkeys::bDoFavorShiftKey);
         ReadBoolSetting(mcm, "Hotkeys", "bDoFavorAltKey", Hotkeys::bDoFavorAltKey);
+        ReadBoolSetting(mcm, "Hotkeys", "bControlWithPower", Hotkeys::bControlWithPower);
         // Colors
         ReadStringSetting(mcm, "Colors", "sDefaultColor", Colors::sDefaultColor);
         // Icons
