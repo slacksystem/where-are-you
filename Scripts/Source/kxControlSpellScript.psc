@@ -1,12 +1,12 @@
 Scriptname kxControlSpellScript extends ActiveMagicEffect
 {Spell/Magic Effect to let the player activate the features of the mod}
 
-string[] search
+import kxWhereAreYouLogging
 
-kxWhereAreYouAlias Property thisAlias auto
+kxWhereAreYouAlias Property playerAlias auto
 
 event OnEffectStart(Actor akCaster, Actor akTarget)
-    
+
     uilistmenu listMenu = uiextensions.GetMenu("UIListMenu") as uilistmenu
     if listMenu
       listMenu.AddEntryItem("Search")
@@ -18,15 +18,15 @@ event OnEffectStart(Actor akCaster, Actor akTarget)
     endIf
     string resultString = listMenu.GetResultString()
     if resultString == "Search"
-      thisAlias.SearchNPC() 
+      playerAlias.SearchNPC() 
     elseIf resultString == "Track"
-      thisAlias.TrackNpcAtCrosshair()
+      playerAlias.TrackNpcAtCrosshair()
     elseIf resultString == "Commands"
-      thisAlias.ExecuteCommandForNpcAtCrosshair()
+      playerAlias.ExecuteCommandForNpcAtCrosshair()
     elseIf resultString == "Favor"
-      thisAlias.MakeNpcAtCrosshairDoFavor()
+      playerAlias.MakeNpcAtCrosshairDoFavor()
     else
-      Debug.Trace(kxWhereAreYouCommon.GetModName() + ": Invalid menu response: " + resultString)
+      Log("Invalid menu response: " + resultString)
     endIf
 
 endEvent

@@ -5,9 +5,13 @@ import kxWhereAreYouNative
 import kxWhereAreYouProperties
 
 Spell Property kx_ControlSpell auto
+kxWhereAreYouAlias Property playerAlias auto hidden
+
+function OnInit()
+  playerAlias = GetNthAlias(0) as kxWhereAreYouAlias
+endFunction
 
 function OnConfigClose()
-  kxWhereAreYouAlias playerAlias = GetNthAlias(0) as kxWhereAreYouAlias
   playerAlias.UnregisterForAllKeys()
   playerAlias.RegisterForAllKeys()
   UpdateMcmSettings()
