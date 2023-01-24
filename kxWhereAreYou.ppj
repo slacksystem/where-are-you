@@ -7,20 +7,21 @@
     Optimize="true" 
     Release="true" 
     Zip="true"
-    Package="true"
+    Package="false"
     Final="true">
     <Variables>
         <Variable Name="ModName"       Value="kxWhereAreYou" />
-        <Variable Name="ModVersion"    Value="2.0.0" />
+        <Variable Name="ModVersion"    Value="2.0.1" />
         <Variable Name="Output"        Value="dist" />
-        <Variable Name="GameRoot"      Value="C:\Development\Skyrim Versions\1.6.640 - Steam"/>
-        <Variable Name="ImportsFolder" Value="C:\Development\MO2\Instances\Multiple - Steam\mods"/>
+        <Variable Name="GameRoot"      Value="S:\SkyrimVR\" />
+        <Variable Name="ImportsFolder" Value="C:\Modding\PapyrusImports" />
     </Variables>
     <Imports>
-        <Import>@ImportsFolder\SKSE 2.2.3 - Skyrim 1.6.640 - Scripts\Scripts\Source</Import>
-        <Import>@ImportsFolder\UIExtensions\scripts\source</Import>
-        <Import>@ImportsFolder\MCM Helper SDK\scripts\source</Import>
-        <Import>@GameRoot\Data\Scripts\Source</Import>
+        <Import>@ImportsFolder\SkyUI</Import>
+        <Import>@ImportsFolder\SKSE</Import>
+        <Import>@ImportsFolder\UIExtensions</Import>
+        <Import>@ImportsFolder\MCM Helper</Import>
+        <Import>@ImportsFolder\VanillaScripts</Import>
     </Imports>
     <Folders>
         <!-- Relative path to folder containing .psc Papyrus source code files for this project -->
@@ -42,6 +43,9 @@
             <!-- <Include>SKSE/Plugins/@ModName.pdb</Include> -->
             <Include>MCM/Config/@ModName/settings.ini</Include>
             <Include>MCM/Config/@ModName/config.json</Include>
+            <Include>@ModName.esp</Include>
+            <Match In="Scripts">*.pex</Match>
+            <Match In="Scripts\Source">*.psc</Match>
             <Include NoRecurse="true">*.bsa</Include>
         </ZipFile>
     </ZipFiles>

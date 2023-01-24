@@ -3,6 +3,9 @@
     "folders": [
         {
             "path": "."
+        },
+        {
+            "path": "../../Papyrus Imports/UIExtensions"
         }
     ],
     "settings": {
