@@ -3,10 +3,7 @@ Scriptname kxControlSpellScript extends ActiveMagicEffect
 
 string[] search
 
-import kxWhereAreYouAlias
-
-event OnEffectStart
-endEvent
+kxWhereAreYouAlias Property thisAlias auto
 
 event OnEffectStart(Actor akCaster, Actor akTarget)
     
@@ -19,9 +16,17 @@ event OnEffectStart(Actor akCaster, Actor akTarget)
 
       listMenu.OpenMenu()
     endIf
-    string resultString = listMenu.GetMenuResultString()
-
-    if resultString
+    string resultString = listMenu.GetResultString()
+    if resultString == "Search"
+      thisAlias.SearchNPC() 
+    elseIf resultString == "Track"
+      thisAlias.TrackNpcAtCrosshair()
+    elseIf resultString == "Commands"
+      thisAlias.ExecuteCommandForNpcAtCrosshair()
+    elseIf resultString == "Favor"
+      thisAlias.MakeNpcAtCrosshairDoFavor()
+    else
+      Debug.Trace(kxWhereAreYouCommon.GetModName() + ": Invalid menu response: " + resultString)
     endIf
 
 endEvent
