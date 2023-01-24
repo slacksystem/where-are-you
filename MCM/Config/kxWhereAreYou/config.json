@@ -320,7 +320,7 @@
           "help": "Use [Alt] key",
           "valueOptions": {
             "sourceType": "ModSettingBool"
-          },
+          }
         },
         {
           "type": "header",

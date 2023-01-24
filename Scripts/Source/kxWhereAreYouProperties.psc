@@ -118,6 +118,10 @@ bool function KEY_DO_FAVOR_ALT() global
   return MCM.GetModSettingBool(GetModName(), "bDoFavorAltKey:Hotkeys")
 endFunction
 
+bool function CONTROL_WITH_POWER() global
+  return MCM.GetModSettingBool(GetModName(), "bControlWithPower:Hotkeys")
+endFunction
+
 
 int function MAX_RESULT_COUNT() global
   return MCM.GetModSettingInt(GetModName(), "uMaxResultCount:Search")
