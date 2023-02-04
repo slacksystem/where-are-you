@@ -17,6 +17,7 @@ event OnEffectStart(Actor akCaster, Actor akTarget)
       listMenu.OpenMenu()
     endIf
     string resultString = listMenu.GetResultString()
+    Debug.Notification("Result was " + resultString)
     if resultString == "Search"
       playerAlias.SearchNPC() 
     elseIf resultString == "Track"
